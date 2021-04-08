@@ -13,13 +13,17 @@ It includes a web app where an emergency worker can input a new message and get 
   - Flask Web App 
  
 **process_data.py** is a python script for ETL pipeline it writes a data cleaning pipeline that loads and merge the messages and categories datasets cleans it and stores it in a SQLite database.
+
 **train_classifier.py** is a python script for writing a machine learning pipeline. It loads data from the SQLite database. Splits the dataset into training and test sets Builds a text processing and machine learning pipeline Trains and tunes a model. In end saves the final model as a pickle file
 
+**Flask Web App** A webpage or API which takes the user input message and classify them into categories.
 
 Instructions:
 Run the following commands in the project's root directory to set up your database and model.
 
-To run ETL pipeline that cleans data and stores in database python data/process_data.py data/disaster_messages.csv data/disaster_categories.csv data/DisasterResponse.db To run ML pipeline that trains classifier and saves python models/train_classifier.py data/DisasterResponse.db models/classifier.pkl Run the following command in the app's directory to run your web app. python run.py
+To run ETL pipeline that cleans data and stores in database python data/process_data.py data/disaster_messages.csv data/disaster_categories.csv data/DisasterResponse.db To run 
+
+ML pipeline that trains classifier and saves python models/train_classifier.py data/DisasterResponse.db models/classifier.pkl Run the following command in the app's directory to run your web app. python run.py
 
 Go to http://0.0.0.0:3001/
 
